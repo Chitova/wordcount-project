@@ -1,0 +1,14 @@
+<h1> This is a word count page. there are {{ textcount }} words on this page</h1>
+
+<a href="{% url 'home' %}"> Try again</a>
+<a href="{% url 'about' %}">About Us</a>
+
+<h2>Fulltext</h2>
+{{ fulltext }}
+
+<h3>Word Analytics</h3>
+{% for word, wordcount in worddiction %}
+
+{{ word }} - {{ wordcount }}
+<br/>
+{% endfor %}
